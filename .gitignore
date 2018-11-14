@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/packages
+/MASGlobal.Domain/obj/Debug
+/MASGlobal.Domain/bin/Debug
+/MASGlobal.Web/bin/roslyn
+/MASGlobal.Web/bin
+/MASGlobal.Web/obj/Debug
