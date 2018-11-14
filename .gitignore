@@ -9,3 +9,5 @@
 /MASGlobal.Web/bin/roslyn
 /MASGlobal.Web/bin
 /MASGlobal.Web/obj/Debug
+/MASGlobal.Test/obj/Debug
+/MASGlobal.Test/bin/Debug

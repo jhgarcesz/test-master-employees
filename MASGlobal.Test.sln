@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MASGlobal.Web", "MASGlobal.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MASGlobal.Domain", "MASGlobal.Domain\MASGlobal.Domain.csproj", "{903F9B32-9EFF-4B5E-B9B9-E417B0638261}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MASGlobal.Tests", "MASGlobal.Test\MASGlobal.Tests.csproj", "{B84C5999-9A1E-45DF-A3A5-6D2FAFFCD007}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{903F9B32-9EFF-4B5E-B9B9-E417B0638261}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{903F9B32-9EFF-4B5E-B9B9-E417B0638261}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{903F9B32-9EFF-4B5E-B9B9-E417B0638261}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B84C5999-9A1E-45DF-A3A5-6D2FAFFCD007}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B84C5999-9A1E-45DF-A3A5-6D2FAFFCD007}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B84C5999-9A1E-45DF-A3A5-6D2FAFFCD007}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B84C5999-9A1E-45DF-A3A5-6D2FAFFCD007}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
