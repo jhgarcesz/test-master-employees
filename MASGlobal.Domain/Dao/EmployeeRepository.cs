@@ -45,13 +45,13 @@ namespace MASGlobal.Domain.Dao
                 {
                     tcs.TrySetException(response.ErrorException);
                 }
-                else if (response.StatusCode != HttpStatusCode.OK && response.StatusCode != HttpStatusCode.Created)
+                else if (response.StatusCode == HttpStatusCode.OK)
                 {
-                    tcs.TrySetException(new HttpException($"Error calling reviews service: {response.Content}, StatusCode: {(int)response.StatusCode}, Reason: {response.StatusDescription}"));
+                    tcs.TrySetResult(response);
                 }
                 else
                 {
-                    tcs.TrySetResult(response);
+                    tcs.TrySetException(new HttpException($"Error calling employees service: {response.Content}, StatusCode: {(int)response.StatusCode}, Reason: {response.StatusDescription}"));
                 }
             });
 
@@ -59,24 +59,6 @@ namespace MASGlobal.Domain.Dao
             var responseDto = JsonConvert.DeserializeObject<List<BaseEmployeeDto>>(clientResponse.Content);
 
             return responseDto;
-
-            /*
-            var response = client.Execute(request);
-
-            if (response.StatusCode == HttpStatusCode.Unauthorized || response.StatusCode == HttpStatusCode.InternalServerError)
-            {
-                var ex = new EmployeeServiceException(Convert.ToInt32(response.StatusCode), "");
-                throw ex;
-            }
-
-            if (response.StatusCode == HttpStatusCode.OK)
-            {
-                var responseDto = JsonConvert.DeserializeObject<List<BaseEmployeeDto>>(response.Content);
-                return responseDto;
-            }
-
-            //create own exception
-            throw new Exception("General error calling the employee service"); */
         }
 
         /// <summary>

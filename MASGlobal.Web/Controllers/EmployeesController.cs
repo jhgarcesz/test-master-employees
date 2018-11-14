@@ -34,7 +34,12 @@ namespace MASGlobal.Web.Controllers
         {
             var employees = await employeeService.GetAllEmployees();
 
-            return employees.Any() ? (IHttpActionResult)Ok(employees) : NotFound();
+            if (employees.Any())
+            {
+                return Ok(employees);
+            }
+
+            return NotFound();
         }
 
         /// <summary>
@@ -48,7 +53,12 @@ namespace MASGlobal.Web.Controllers
         {
             var employee = await employeeService.GetEmployeeById(id);
 
-            return employee is null ? (IHttpActionResult)NotFound() : Ok(employee);
+            if (employee is null)
+            {
+                return NotFound();
+            }
+
+            return Ok(employee);
         }
     }
 }

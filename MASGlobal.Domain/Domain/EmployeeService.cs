@@ -1,6 +1,5 @@
 ﻿using MASGlobal.Domain.Contracts;
 using MASGlobal.Domain.Dtos;
-using MASGlobal.Domain.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
